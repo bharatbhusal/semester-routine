@@ -1,0 +1,154 @@
+{
+    "weekdays":{
+        "monday":{
+            "8":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "9":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "10":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "11":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "14":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "15":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "16":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            }
+        },
+        "tuesday":{
+            "8":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "9":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "10":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "11":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "14":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "15":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "16":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            }
+        },
+        "wednesday":{
+            "8":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "9":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "10":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "11":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "14":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "15":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "16":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            }
+        },
+        "thrusday":{
+            "8":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "9":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "10":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "11":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "14":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "15":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "16":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            }
+        },
+        "friday":{
+            "8":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "9":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "10":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "11":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "14":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "15":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            },
+            "16":{
+                "subject": "CSEN3091",
+                "hours": "1"
+            }
+        }
+    }
+}
