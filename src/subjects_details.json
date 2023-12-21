@@ -1,0 +1,30 @@
+{
+    "CSEN2061": {
+        "name": "Database Management Systems",
+        "faculty": {
+            "name": "Sudha C",
+            "cabin": "A611",
+            "contact": "some number"
+        },
+        "optionalRoom": {
+            "room": "A517",
+            "day": "friday"
+        }
+    },
+    "CSEN2061P": {
+        "name": "Database Management Systems",
+        "faculty": {
+            "name": "Sudha C",
+            "cabin": "A611",
+            "contact": "some number"
+        }
+    },
+    "CSEN2091": {
+        "name": "OOSE based Application Development",
+        "faculty": {
+            "name": "Nandita Bhanja Chaudhuri",
+            "cabin": "A411",
+            "contact": "some number"
+        }
+    }
+}
