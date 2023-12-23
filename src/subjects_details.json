@@ -15,7 +15,7 @@
         "name": "Database Management Systems",
         "faculty": {
             "name": "Sudha C",
-            "cabin": "A611",
+            "cabin": "C013",
             "contact": "some number"
         }
     },
@@ -26,5 +26,21 @@
             "cabin": "A411",
             "contact": "some number"
         }
-    }
+    },
+    "CSEN209P": {
+        "name": "OOSE based Application Development",
+        "faculty": {
+            "name": "Nandita Bhanja Chaudhuri",
+            "cabin": "C013",
+            "contact": "some number"
+        }
+    },
+    "CSEN3061": {
+        "name": "Automata Theory and Compiler Design",
+        "faculty": {
+            "name": "Dibyajyoti Guha",
+            "cabin": "C013",
+            "contact": "some number"
+        }
+    },
 }
