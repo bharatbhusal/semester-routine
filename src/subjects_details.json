@@ -12,10 +12,10 @@
         }
     },
     "CSEN2061P": {
-        "name": "Database Management Systems",
+        "name": "Database Management Systems Lab",
         "faculty": {
             "name": "Sudha C",
-            "cabin": "C013",
+            "cabin": "A611",
             "contact": "some number"
         }
     },
@@ -28,10 +28,10 @@
         }
     },
     "CSEN209P": {
-        "name": "OOSE based Application Development",
+        "name": "OOSE based Application Development Lab",
         "faculty": {
             "name": "Nandita Bhanja Chaudhuri",
-            "cabin": "C013",
+            "cabin": "A411",
             "contact": "some number"
         }
     },
@@ -39,7 +39,23 @@
         "name": "Automata Theory and Compiler Design",
         "faculty": {
             "name": "Dibyajyoti Guha",
-            "cabin": "C013",
+            "cabin": "Some cabin",
+            "contact": "some number"
+        }
+    },
+    "CSEN3091": {
+        "name": "Digital Forensics",
+        "faculty": {
+            "name": "Some Faculty",
+            "cabin": "Some cabin",
+            "contact": "some number"
+        }
+    },
+    "CSEN3091P": {
+        "name": "Digital Forensics lab",
+        "faculty": {
+            "name": "Some Faculty",
+            "cabin": "Some cabin",
             "contact": "some number"
         }
     },
