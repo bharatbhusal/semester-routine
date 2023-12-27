@@ -5,10 +5,6 @@
             "name": "Sudha C",
             "cabin": "A611",
             "contact": "some number"
-        },
-        "optionalRoom": {
-            "room": "A517",
-            "day": "friday"
         }
     },
     "CSEN2061P": {
@@ -27,7 +23,7 @@
             "contact": "some number"
         }
     },
-    "CSEN209P": {
+    "CSEN2091P": {
         "name": "OOSE based Application Development Lab",
         "faculty": {
             "name": "Nandita Bhanja Chaudhuri",
@@ -46,7 +42,7 @@
     "CSEN3091": {
         "name": "Digital Forensics",
         "faculty": {
-            "name": "Some Faculty",
+            "name": "Archana M R",
             "cabin": "Some cabin",
             "contact": "some number"
         }
@@ -54,8 +50,24 @@
     "CSEN3091P": {
         "name": "Digital Forensics lab",
         "faculty": {
-            "name": "Some Faculty",
+            "name": "Archana M R",
             "cabin": "Some cabin",
+            "contact": "some number"
+        }
+    },
+    "CSEN3071": {
+        "name": "Web Application Development and Software Frameworks",
+        "faculty": {
+            "name": "A B Pradeep Kumar",
+            "cabin": "Some cabin",
+            "contact": "some number"
+        }
+    },
+    "CSEN3071P": {
+        "name": "Web Application Development and Software Frameworks",
+        "faculty": {
+            "name": "A B Pradeep Kumar",
+            "cabin": "A411",
             "contact": "some number"
         }
     },
