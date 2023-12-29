@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import weekdays from "./routine.json";
+import SubjectDetail from './SubjectDetail';
 
 const Table = () => {
     const days = Object.keys(weekdays)
-
+    const [visibility, setVisibility] = useState("hidden")
+    const [courseCode, setCourseCode] = useState("some course code")
     function getDailyRoutine(day) {
         const dayRoutine = []
         days.map(each => {
@@ -19,8 +21,21 @@ const Table = () => {
         return dayRoutine
     }
 
+    const getSubjectDetail = () => {
+        console.log("clicked")
+        setVisibility("visible")
+        setCourseCode("CSEN0000")
+    }
+
+
+    const hideDetail = () => {
+        setVisibility("hidden")
+
+    }
     return (
         <>
+            <button onClick={getSubjectDetail}>click</button>
+            <SubjectDetail visibility={visibility} courseCode={courseCode} disable={hideDetail} />
             <table>
                 <thead>
                     <tr>
