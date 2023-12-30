@@ -3,40 +3,39 @@ import weekdays from "./routine.json";
 import SubjectDetail from './SubjectDetail';
 
 const Table = () => {
-    const days = Object.keys(weekdays)
-    const [visibility, setVisibility] = useState("hidden")
-    const [courseCode, setCourseCode] = useState("some course code")
+    const days = Object.keys(weekdays);
+    const [visibility, setVisibility] = useState("hidden");
+    const [courseCode, setCourseCode] = useState("some course code");
+
     function getDailyRoutine(day) {
-        const dayRoutine = []
-        days.map(each => {
+        const dayRoutine = [];
+        days.forEach(each => {
             if (each === day)
             {
-                const hours = Object.keys(weekdays[day])
-                hours.map(hour => {
-                    dayRoutine.push(weekdays[day][hour])
-                })
-
+                const hours = Object.keys(weekdays[day]);
+                hours.forEach(hour => {
+                    dayRoutine.push(weekdays[day][hour]);
+                });
             }
-        })
-        return dayRoutine
+        });
+        return dayRoutine;
     }
 
-    const getSubjectDetail = () => {
-        console.log("clicked")
-        setVisibility("visible")
-        setCourseCode("CSEN0000")
-    }
+    const getSubjectDetail = (e) => {
+        console.log("clicked");
+        setVisibility("visible");
+        setCourseCode(e.target.textContent);
 
+    }
 
     const hideDetail = () => {
-        setVisibility("hidden")
-
+        setVisibility("hidden");
     }
+
     return (
-        <>
-            <button onClick={getSubjectDetail}>click</button>
+        <div className='table'>
             <SubjectDetail visibility={visibility} courseCode={courseCode} disable={hideDetail} />
-            <table>
+            <table >
                 <thead>
                     <tr>
                         <th>Days/Time</th>
@@ -51,28 +50,28 @@ const Table = () => {
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Monday</td>
-                        {getDailyRoutine("monday").map((each, index) => <td key={index}>{each.subject}</td>)}
+                        <td className='days'>Monday</td>
+                        {getDailyRoutine("monday").map((each, index) => <td onClick={getSubjectDetail} key={index}>{each.subject}</td>)}
                     </tr>
                     <tr>
-                        <td>Tuesday</td>
-                        {getDailyRoutine("tuesday").map((each, index) => <td key={index}>{each.subject}</td>)}
+                        <td className='days'>Tuesday</td>
+                        {getDailyRoutine("tuesday").map((each, index) => <td onClick={getSubjectDetail} key={index}>{each.subject}</td>)}
                     </tr>
                     <tr>
-                        <td>Wednesday</td>
-                        {getDailyRoutine("wednesday").map((each, index) => <td key={index}>{each.subject}</td>)}
+                        <td className='days'>Wednesday</td>
+                        {getDailyRoutine("wednesday").map((each, index) => <td onClick={getSubjectDetail} key={index}>{each.subject}</td>)}
                     </tr>
                     <tr>
-                        <td>Thursday</td>
-                        {getDailyRoutine("thrusday").map((each, index) => <td key={index}>{each.subject}</td>)}
+                        <td className='days'>Thursday</td>
+                        {getDailyRoutine("thursday").map((each, index) => <td onClick={getSubjectDetail} key={index}>{each.subject}</td>)}
                     </tr>
                     <tr>
-                        <td>Friday</td>
-                        {getDailyRoutine("friday").map((each, index) => <td key={index}>{each.subject}</td>)}
+                        <td className='days'>Friday</td>
+                        {getDailyRoutine("friday").map((each, index) => <td onClick={getSubjectDetail} key={index}>{each.subject}</td>)}
                     </tr>
                 </tbody>
             </table>
-        </>
+        </div>
     )
 }
 

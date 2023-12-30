@@ -58,6 +58,9 @@ table {
   color: #2c2c6c;
   width: 80vw;
   height: 40vh;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border-collapse: collapse;
 }
 
 /* Style the table headers */
@@ -68,16 +71,40 @@ td {
   text-align: left;
   background-color: #e6f7e3;
 }
-tr {
-  background-color: "#4CAF50";
+
+td:not(.days):hover {
+  background-color: #b6eeaa;
+  cursor: pointer;
 }
 
-th {
+th,
+.days {
   background-color: #f2f2f2;
 }
-
 .subject_detail {
-  width: 100vw;
-  height: 100vh;
+  z-index: 1;
+  position: absolute;
   visibility: hidden;
+  background-color: #21ab58;
+  box-shadow: 4px 4px 6px 4px rgba(28, 72, 68, 0.3);
+  border-radius: 2rem;
+  padding: 1rem;
+  top: 35vh;
+  left: 40vw;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 0.7rem;
+  font-size: medium;
+  font-weight: 900;
+  border-radius: 1rem;
+}
+button:hover {
+  background-color: #cae893;
 }
