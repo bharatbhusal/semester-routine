@@ -28,8 +28,8 @@ Check out the live demo [here](https://bharatbhusal.github.io/class-routine). I 
    ```bash
    git clone https://github.com/bharatbhusal/class-routine.git
    ```
-
-2. Install dependencies:
+2. Feed data in `routine.json` and `subjects_details.json` maintaining the format.
+3. Install dependencies:
 
    ```bash
    cd class-routine
