@@ -4,6 +4,7 @@ import subjects from './subjects_details.json';
 const SubjectDetail = ({ courseCode, visibility, disable }) => {
     // Fetching subject details based on the course code
     const course = subjects[courseCode];
+    console.log(course)
 
     // If course details are not found, display a message
     if (!course)

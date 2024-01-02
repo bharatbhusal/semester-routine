@@ -16,7 +16,7 @@ const Table = () => {
             {
                 const hours = Object.keys(weekdays[day]);
                 hours.forEach(hour => {
-                    dayRoutine.push(weekdays[day][hour]);
+                    dayRoutine.push([weekdays[day][hour], hour]);
                 });
             }
         });
@@ -25,9 +25,11 @@ const Table = () => {
 
     // Function to handle the click event on a subject cell
     const getSubjectDetail = (e) => {
+        const liElement = e.currentTarget;
         console.log("clicked");
-        setVisibility("visible");
-        setCourseCode(e.target.textContent);
+        setVisibility("visible")
+
+        setCourseCode(liElement.querySelector(".subject").textContent);
     }
 
     // Function to hide the subject detail component
@@ -38,60 +40,66 @@ const Table = () => {
     // JSX structure for the Table component
     return (
         // Container for the table
-        <>
-
-            <div className='table'>
-                {/* SubjectDetail component for displaying detailed information */}
-                <SubjectDetail visibility={visibility} courseCode={courseCode} disable={hideDetail} />
-                {/* Table structure */}
-                <table>
-                    {/* Table header */}
-                    <thead>
-                        <tr>
-                            <th>Days/Time</th>
-                            <th>8:00 - 8:50</th>
-                            <th>9:00 -  9:50</th>
-                            <th>10:00 -  10:50</th>
-                            <th>11:00 -  11:50</th>
-                            <th>14:00 -  14:50</th>
-                            <th>15:00 -  15:50</th>
-                            <th>16:00 -  16:50</th>
-                        </tr>
-                    </thead>
-                    {/* Table body */}
-                    <tbody>
-                        <tr>
-                            <td className='days'>Monday</td>
-                            {/* Mapping through the daily routine for Monday */}
-                            {getDailyRoutine("monday").map((each, index) => <td onClick={getSubjectDetail} key={index}>{each.subject}</td>)}
-                        </tr>
-                        <tr>
-                            <td className='days'>Tuesday</td>
-                            {/* Mapping through the daily routine for Tuesday */}
-                            {getDailyRoutine("tuesday").map((each, index) => <td onClick={getSubjectDetail} key={index}>{each.subject}</td>)}
-                        </tr>
-                        <tr>
-                            <td className='days'>Wednesday</td>
-                            {/* Mapping through the daily routine for Wednesday */}
-                            {getDailyRoutine("wednesday").map((each, index) => <td onClick={getSubjectDetail} key={index}>{each.subject}</td>)}
-                        </tr>
-                        <tr>
-                            <td className='days'>Thursday</td>
-                            {/* Mapping through the daily routine for Thursday */}
-                            {getDailyRoutine("thursday").map((each, index) => <td onClick={getSubjectDetail} key={index}>{each.subject}</td>)}
-                        </tr>
-                        <tr>
-                            <td className='days'>Friday</td>
-                            {/* Mapping through the daily routine for Friday */}
-                            {getDailyRoutine("friday").map((each, index) => <td onClick={getSubjectDetail} key={index}>{each.subject}</td>)}
-                        </tr>
-                    </tbody>
-                </table>
+        <div className='table flex-col'>
+            {/* SubjectDetail component for displaying detailed information */}
+            <SubjectDetail visibility={visibility} courseCode={courseCode} disable={hideDetail} />
+            {/* Table structure */}
+            <table className='table-large'>
+                {/* Table header */}
+                <thead>
+                    <tr>
+                        <th>Days/Time</th>
+                        <th>8:00 - 8:50</th>
+                        <th>9:00 -  9:50</th>
+                        <th>10:00 -  10:50</th>
+                        <th>11:00 -  11:50</th>
+                        <th>14:00 -  14:50</th>
+                        <th>15:00 -  15:50</th>
+                        <th>16:00 -  16:50</th>
+                    </tr>
+                </thead>
+                {/* Table body */}
+                <tbody>
+                    <tr>
+                        <td className='days'>Monday</td>
+                        {/* Mapping through the daily routine for Monday */}
+                        {getDailyRoutine("monday").map((each, index) => <td onClick={getSubjectDetail} key={index}>{each[0].subject}</td>)}
+                    </tr>
+                    <tr>
+                        <td className='days'>Tuesday</td>
+                        {/* Mapping through the daily routine for Tuesday */}
+                        {getDailyRoutine("tuesday").map((each, index) => <td onClick={getSubjectDetail} key={index}>{each[0].subject}</td>)}
+                    </tr>
+                    <tr>
+                        <td className='days'>Wednesday</td>
+                        {/* Mapping through the daily routine for Wednesday */}
+                        {getDailyRoutine("wednesday").map((each, index) => <td onClick={getSubjectDetail} key={index}>{each[0].subject}</td>)}
+                    </tr>
+                    <tr>
+                        <td className='days'>Thursday</td>
+                        {/* Mapping through the daily routine for Thursday */}
+                        {getDailyRoutine("thursday").map((each, index) => <td onClick={getSubjectDetail} key={index}>{each[0].subject}</td>)}
+                    </tr>
+                    <tr>
+                        <td className='days'>Friday</td>
+                        {/* Mapping through the daily routine for Friday */}
+                        {getDailyRoutine("friday").map((each, index) => <td onClick={getSubjectDetail} key={index}>{each[0].subject}</td>)}
+                    </tr>
+                </tbody>
+            </table>
+            <div className='table-mini'>
+                <ul className='flex-col'>
+                    {getDailyRoutine("friday").map((each, index) => <li className="day" onClick={getSubjectDetail} key={index}>
+                        <div className="subject">
+                            {each[0].subject}
+                        </div>
+                        <div className="hour">
+                            {each[1]}:00 to {each[1]}:50
+                        </div>
+                    </li>)}
+                </ul>
             </div>
-            <div className="table-mini">
-
-            </div>
-        </>
+        </div>
     );
 };
 
