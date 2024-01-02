@@ -105,6 +105,7 @@ h1 {
   background-color: #85ffbd;
   background-image: linear-gradient(45deg, #3b7d59 36%, #514f21 93%);
 }
+
 th,
 td {
   border: 1px solid #ddd;
@@ -121,6 +122,14 @@ td:not(.days):hover {
 th,
 .days {
   background-color: #f2f2f2;
+  font-size: x-large;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+}
+
+.subject {
+  font-size: large;
 }
 .subject_detail {
   position: absolute;
@@ -141,7 +150,11 @@ th,
   display: flex;
   justify-content: space-between;
   z-index: 1;
-  /* color: var(--color-text); */
+}
+
+h2 {
+  border-bottom: 2px solid gray;
+  padding-bottom: 0.7rem;
 }
 
 button {
@@ -158,7 +171,6 @@ button:hover {
   color: var(--color-primary);
 }
 
-/* Media queries for medium-sized devices */
 @media screen and (max-width: 1024px) {
   .table-large {
     visibility: visible;
@@ -168,7 +180,6 @@ button:hover {
   }
 }
 
-/* Media queries for small-sized devices */
 @media screen and (max-width: 600px) {
   .table-large {
     visibility: hidden;
