@@ -42,7 +42,7 @@ body {
 
 .routine {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-image: linear-gradient(to right, #434343 0%, black 100%);
 }
 h1 {
@@ -60,7 +60,7 @@ h1 {
   top: 6rem;
   margin: 0 auto;
   color: #2c2c6c;
-  border-radius: 1.5rem;
+  border-radius: 2rem;
   overflow: hidden;
   width: 80vw;
   height: 50vh;
@@ -164,7 +164,7 @@ button {
   border-radius: 1rem;
   margin-top: 1rem;
   color: var(--color-text);
-  background-color: rgb(76, 71, 71);
+  background-color: rgb(107, 56, 56);
 }
 button:hover {
   background-color: #cae893;
@@ -177,6 +177,9 @@ button:hover {
   }
   .table-mini {
     visibility: hidden;
+  }
+  .subject_detail {
+    background-color: #169348;
   }
 }
 

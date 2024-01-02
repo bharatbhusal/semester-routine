@@ -1,38 +1,43 @@
 {
     "CSEN2061": {
         "name": "Database Management Systems",
+        "classroom": "A515",
         "faculty": {
             "name": "Sudha C",
             "cabin": "A611",
-            "contact": "some number"
+            "contact": "+91 86396 38428"
         }
     },
     "CSEN2061P": {
         "name": "Database Management Systems Lab",
+        "classroom": "C013",
         "faculty": {
             "name": "Sudha C",
             "cabin": "A611",
-            "contact": "some number"
+            "contact": "+91 86396 38428"
         }
     },
     "CSEN2091": {
         "name": "OOSE based Application Development",
+        "classroom": "A515",
         "faculty": {
             "name": "Nandita Bhanja Chaudhuri",
             "cabin": "A411",
-            "contact": "some number"
+            "contact": "+91 94931 46542"
         }
     },
     "CSEN2091P": {
         "name": "OOSE based Application Development Lab",
+        "classroom": "C013",
         "faculty": {
             "name": "Nandita Bhanja Chaudhuri",
             "cabin": "A411",
-            "contact": "some number"
+            "contact": "+91 94931 46542"
         }
     },
     "CSEN3061": {
         "name": "Automata Theory and Compiler Design",
+        "classroom": "A515",
         "faculty": {
             "name": "Dibyajyoti Guha",
             "cabin": "Some cabin",
@@ -41,34 +46,38 @@
     },
     "CSEN3091": {
         "name": "Digital Forensics",
+        "classroom": "A515",
         "faculty": {
             "name": "Archana M R",
             "cabin": "Some cabin",
-            "contact": "some number"
+            "contact": "+91 96527 73502"
         }
     },
     "CSEN3091P": {
         "name": "Digital Forensics lab",
+        "classroom": "C013",
         "faculty": {
             "name": "Archana M R",
             "cabin": "Some cabin",
-            "contact": "some number"
+            "contact": "+91 96527 73502"
         }
     },
     "CSEN3071": {
         "name": "Web Application Development and Software Frameworks",
+        "classroom": "A515",
         "faculty": {
             "name": "A B Pradeep Kumar",
             "cabin": "Some cabin",
-            "contact": "some number"
+            "contact": "+91 87634 62709"
         }
     },
     "CSEN3071P": {
         "name": "Web Application Development and Software Frameworks",
+        "classroom": "C013",
         "faculty": {
             "name": "A B Pradeep Kumar",
             "cabin": "A411",
-            "contact": "some number"
+            "contact": "+91 87634 62709"
         }
     }
 }
