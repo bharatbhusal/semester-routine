@@ -63,7 +63,7 @@ h1 {
   width: 80vw;
   height: 50vh;
 
-  visibility: hidden;
+  visibility: visible;
 }
 
 .table-mini {
@@ -76,6 +76,7 @@ h1 {
   border-radius: 1.5rem;
   overflow: hidden;
   border-collapse: collapse;
+  visibility: hidden;
 }
 
 .table-mini ul {
@@ -118,13 +119,13 @@ th,
 }
 .subject_detail {
   position: absolute;
-  top: 8rem;
+  top: 15rem;
   visibility: hidden;
   background-color: #21ab58;
   box-shadow: 4px 4px 6px 4px rgba(28, 72, 68, 0.3);
   border-radius: 2rem;
   padding: 1rem;
-  width: 40vw;
+  /* width: 40vw; */
 
   max-width: 300px;
   height: 300px;
@@ -142,4 +143,24 @@ button {
 }
 button:hover {
   background-color: #cae893;
+}
+
+/* Media queries for medium-sized devices */
+@media screen and (max-width: 1024px) {
+  .table-large {
+    visibility: visible;
+  }
+  .table-mini {
+    visibility: hidden;
+  }
+}
+
+/* Media queries for small-sized devices */
+@media screen and (max-width: 600px) {
+  .table-large {
+    visibility: hidden;
+  }
+  .table-mini {
+    visibility: visible;
+  }
 }

@@ -63,27 +63,47 @@ const Table = () => {
                     <tr>
                         <td className='days'>Monday</td>
                         {/* Mapping through the daily routine for Monday */}
-                        {getDailyRoutine("monday").map((each, index) => <td onClick={getSubjectDetail} key={index}>{each[0].subject}</td>)}
+                        {getDailyRoutine("monday").map((each, index) => <td onClick={getSubjectDetail} key={index} >
+                            <div className="subject">
+                                {each[0].subject}
+                            </div>
+                        </td>)}
                     </tr>
                     <tr>
                         <td className='days'>Tuesday</td>
                         {/* Mapping through the daily routine for Tuesday */}
-                        {getDailyRoutine("tuesday").map((each, index) => <td onClick={getSubjectDetail} key={index}>{each[0].subject}</td>)}
+                        {getDailyRoutine("tuesday").map((each, index) => <td onClick={getSubjectDetail} key={index}>
+                            <div className="subject">
+                                {each[0].subject}
+                            </div>
+                        </td>)}
                     </tr>
                     <tr>
                         <td className='days'>Wednesday</td>
                         {/* Mapping through the daily routine for Wednesday */}
-                        {getDailyRoutine("wednesday").map((each, index) => <td onClick={getSubjectDetail} key={index}>{each[0].subject}</td>)}
+                        {getDailyRoutine("wednesday").map((each, index) => <td onClick={getSubjectDetail} key={index}>
+                            <div className="subject">
+                                {each[0].subject}
+                            </div>
+                        </td>)}
                     </tr>
                     <tr>
                         <td className='days'>Thursday</td>
                         {/* Mapping through the daily routine for Thursday */}
-                        {getDailyRoutine("thursday").map((each, index) => <td onClick={getSubjectDetail} key={index}>{each[0].subject}</td>)}
+                        {getDailyRoutine("thursday").map((each, index) => <td onClick={getSubjectDetail} key={index}>
+                            <div className="subject">
+                                {each[0].subject}
+                            </div>
+                        </td>)}
                     </tr>
                     <tr>
                         <td className='days'>Friday</td>
                         {/* Mapping through the daily routine for Friday */}
-                        {getDailyRoutine("friday").map((each, index) => <td onClick={getSubjectDetail} key={index}>{each[0].subject}</td>)}
+                        {getDailyRoutine("friday").map((each, index) => <td onClick={getSubjectDetail} key={index}>
+                            <div className="subject">
+                                {each[0].subject}
+                            </div>
+                        </td>)}
                     </tr>
                 </tbody>
             </table>
