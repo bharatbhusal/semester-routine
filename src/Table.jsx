@@ -8,6 +8,19 @@ const Table = () => {
     const [visibility, setVisibility] = useState("hidden");
     const [courseCode, setCourseCode] = useState("some course code");
 
+    function getTodayDay() {
+        const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+        // Get the current date
+        const currentDate = new Date();
+
+        // Get the day of the week (0-6)
+        const dayIndex = currentDate.getDay();
+
+        // Return the day of the week as a string
+        return daysOfWeek[dayIndex].toLocaleLowerCase();
+    }
+
     // Function to get the daily routine for a specific day
     function getDailyRoutine(day) {
         const dayRoutine = [];
@@ -28,7 +41,6 @@ const Table = () => {
         const liElement = e.currentTarget;
         console.log("clicked");
         setVisibility("visible")
-
         setCourseCode(liElement.querySelector(".subject").textContent);
     }
 
@@ -40,13 +52,13 @@ const Table = () => {
     // JSX structure for the Table component
     return (
         // Container for the table
-        <div className='table flex-col'>
+        <div className='table flex-col' >
             {/* SubjectDetail component for displaying detailed information */}
-            <SubjectDetail visibility={visibility} courseCode={courseCode} disable={hideDetail} />
+            < SubjectDetail visibility={visibility} courseCode={courseCode} disable={hideDetail} />
             {/* Table structure */}
-            <table className='table-large'>
+            < table className='table-large' >
                 {/* Table header */}
-                <thead>
+                < thead >
                     <tr>
                         <th>Days/Time</th>
                         <th>8:00 - 8:50</th>
@@ -57,9 +69,9 @@ const Table = () => {
                         <th>15:00 -  15:50</th>
                         <th>16:00 -  16:50</th>
                     </tr>
-                </thead>
+                </thead >
                 {/* Table body */}
-                <tbody>
+                < tbody >
                     <tr>
                         <td className='days'>Monday</td>
                         {/* Mapping through the daily routine for Monday */}
@@ -105,11 +117,11 @@ const Table = () => {
                             </div>
                         </td>)}
                     </tr>
-                </tbody>
-            </table>
+                </tbody >
+            </table >
             <div className='table-mini'>
                 <ul className='flex-col'>
-                    {getDailyRoutine("friday").map((each, index) => <li className="day" onClick={getSubjectDetail} key={index}>
+                    {getDailyRoutine(getTodayDay()).map((each, index) => <li className="day" onClick={getSubjectDetail} key={index}>
                         <div className="subject">
                             {each[0].subject}
                         </div>
@@ -119,7 +131,7 @@ const Table = () => {
                     </li>)}
                 </ul>
             </div>
-        </div>
+        </div >
     );
 };
 
