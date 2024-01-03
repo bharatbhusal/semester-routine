@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import weekdays from "./routine.json";
 import SubjectDetail from './SubjectDetail';
 
@@ -7,19 +7,23 @@ const Table = () => {
     const days = Object.keys(weekdays);
     const [visibility, setVisibility] = useState("hidden");
     const [courseCode, setCourseCode] = useState("some course code");
+    const [day, setDay] = useState('')
 
-    function getTodayDay() {
-        const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    useEffect(() => {
+        function getTodayDay() {
+            const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-        // Get the current date
-        const currentDate = new Date();
+            // Get the current date
+            const currentDate = new Date();
 
-        // Get the day of the week (0-6)
-        const dayIndex = currentDate.getDay();
+            // Get the day of the week (0-6)
+            const dayIndex = currentDate.getDay();
 
-        // Return the day of the week as a string
-        return daysOfWeek[dayIndex].toLocaleLowerCase();
-    }
+            // Return the day of the week as a string
+            return daysOfWeek[dayIndex].toLocaleLowerCase();
+        }
+        setDay(getTodayDay())
+    }, days)
 
     // Function to get the daily routine for a specific day
     function getDailyRoutine(day) {
@@ -33,6 +37,7 @@ const Table = () => {
                 });
             }
         });
+
         return dayRoutine;
     }
 
@@ -122,8 +127,8 @@ const Table = () => {
                 </tbody >
             </table >
             <div className='table-mini'>
-                <ul className='flex-col'>
-                    {getDailyRoutine(getTodayDay()).map((each, index) => <li className="day" onClick={getSubjectDetail} key={index}>
+                {day ? <ul className='flex-col'>
+                    {getDailyRoutine(day).map((each, index) => <li className="day" onClick={getSubjectDetail} key={index}>
                         <div className="subject">
                             {each[0].subject}
                         </div>
@@ -132,6 +137,9 @@ const Table = () => {
                         </div>
                     </li>)}
                 </ul>
+                    :
+                    <div className='no-class flex-col'>C'mon!!! It's weekend.</div >
+                }
             </div>
             <nav>
                 <div>Monday</div>
@@ -145,3 +153,4 @@ const Table = () => {
 };
 
 export default Table;
+
