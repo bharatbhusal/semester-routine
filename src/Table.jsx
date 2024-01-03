@@ -133,6 +133,13 @@ const Table = () => {
                     </li>)}
                 </ul>
             </div>
+            <nav>
+                <div>Monday</div>
+                <div>Tuesday</div>
+                <div>Wednesday</div>
+                <div>Thrusday</div>
+                <div>Friday</div>
+            </nav>
         </div >
     );
 };
