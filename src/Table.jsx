@@ -10,13 +10,13 @@ const Table = () => {
     const daysOfWeek = Object.keys(weekdays);
     const [visibility, setVisibility] = useState("hidden");
     const [courseCode, setCourseCode] = useState("some course code");
-    const [day, setDay] = useState(getTodayDay)
+    const [day, setDay] = useState(getTodayDay())
     const [activeDay, setActiveDay] = useState('');
 
     function getTodayDay() {
         const currentDate = new Date();
         const dayIndex = currentDate.getDay();
-        return daysOfWeek[dayIndex];
+        return daysOfWeek[dayIndex - 1];
     }
 
     const handleDay = (e) => {
