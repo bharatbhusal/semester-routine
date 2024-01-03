@@ -36,7 +36,7 @@ const SubjectDetail = ({ courseCode, visibility, disable }) => {
             </span></p>
 
             {/* Button to close the subject detail */}
-            <button onClick={disable}>Close</button>
+            <button onClick={disable}>X</button>
         </div>
     );
 };
