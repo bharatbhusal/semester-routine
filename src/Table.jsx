@@ -13,7 +13,6 @@ const Table = () => {
     const [day, setDay] = useState(getTodayDay)
     const [activeDay, setActiveDay] = useState('');
 
-    console.log(day)
     function getTodayDay() {
         const currentDate = new Date();
         const dayIndex = currentDate.getDay();

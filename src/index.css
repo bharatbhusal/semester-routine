@@ -196,6 +196,8 @@ nav {
 }
 nav div {
   padding: 0.85rem;
+  width: 100%;
+  text-align: center;
 }
 
 nav div:hover,
