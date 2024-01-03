@@ -5,7 +5,6 @@ const SubjectDetail = ({ courseCode, visibility, disable }) => {
 
     // Fetching subject details based on the course code
     const course = subjects[courseCode];
-    console.log(course)
 
     const handleCopyToClipboard = () => {
         navigator.clipboard.writeText(course.faculty.contact)

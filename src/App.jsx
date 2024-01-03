@@ -4,7 +4,7 @@ import Table from "./Table";
 const App = () => {
     return (
         // Main container for the application
-        <div className='routine flex-col'>
+        <div className='routine'>
             <h1>Class Routine</h1>
             {/* Rendering the Table component */}
             <Table />

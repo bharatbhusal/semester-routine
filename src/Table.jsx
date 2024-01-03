@@ -1,29 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import weekdays from "./routine.json";
 import SubjectDetail from './SubjectDetail';
+import NavBar from './Navbar';
 
 const Table = () => {
     // State variables
     const days = Object.keys(weekdays);
     const [visibility, setVisibility] = useState("hidden");
     const [courseCode, setCourseCode] = useState("some course code");
-    const [day, setDay] = useState('')
+    const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const [day, setDay] = useState(getTodayDay())
+    const [activeDay, setActiveDay] = useState('');
 
-    useEffect(() => {
-        function getTodayDay() {
-            const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-            // Get the current date
-            const currentDate = new Date();
+    function getTodayDay() {
+        const currentDate = new Date();
+        const dayIndex = currentDate.getDay();
+        return daysOfWeek[dayIndex].toLocaleLowerCase();
+    }
 
-            // Get the day of the week (0-6)
-            const dayIndex = currentDate.getDay();
+    const handleDay = (e) => {
+        const temp = e.target.textContent
+        setActiveDay(temp);
 
-            // Return the day of the week as a string
-            return daysOfWeek[dayIndex].toLocaleLowerCase();
-        }
-        setDay(getTodayDay())
-    }, days)
+        daysOfWeek.map((each) => {
+            if (each.includes(temp))
+                setDay(each.toLocaleLowerCase())
+        })
+
+    }
 
     // Function to get the daily routine for a specific day
     function getDailyRoutine(day) {
@@ -127,7 +132,7 @@ const Table = () => {
                 </tbody >
             </table >
             <div className='table-mini'>
-                {day ? <ul className='flex-col'>
+                {getTodayDay() ? <ul className='flex-col'>
                     {getDailyRoutine(day).map((each, index) => <li className="day" onClick={getSubjectDetail} key={index}>
                         <div className="subject">
                             {each[0].subject}
@@ -141,13 +146,7 @@ const Table = () => {
                     <div className='no-class flex-col'>C'mon!!! It's weekend.</div >
                 }
             </div>
-            <nav>
-                <div>Monday</div>
-                <div>Tuesday</div>
-                <div>Wednesday</div>
-                <div>Thrusday</div>
-                <div>Friday</div>
-            </nav>
+            <NavBar activeDay={activeDay} handleDay={handleDay} />
         </div >
     );
 };
