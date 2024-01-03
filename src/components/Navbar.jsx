@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const NavBar = ({ activeDay, handleDay }) => {
 
+    useEffect(() => {
+
+    })
     return (
         <nav>
             <div className={`day ${activeDay === 'Mon' ? 'active' : ''}`} onClick={handleDay}>

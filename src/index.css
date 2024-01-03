@@ -25,12 +25,12 @@
 
 /* HTML and body styles */
 html {
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
 }
 
 /* Removing scrollbar */
 ::-webkit-scrollbar {
-  /* display: none; */
+  display: none;
 }
 body {
   font-family: "Poppins", sans-serif;
@@ -64,6 +64,7 @@ h1 {
 .table-large {
   /* position: absolute; */
   /* top: 6rem; */
+  border: 1px solid green;
   margin: 6rem auto;
   margin-bottom: 1rem;
   color: #2c2c6c;
@@ -72,7 +73,11 @@ h1 {
   width: 80vw;
   height: 50vh;
   visibility: visible;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  border-collapse: collapse;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px, rgba(0, 0, 0, 0.12) 0px 2px 4px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 6px 6px,
+    rgba(0, 0, 0, 0.09) 0px 2px 2px;
+  background-image: linear-gradient(to bottom, #434343 0%, black 100%);
 }
 
 .table-mini {
@@ -92,6 +97,7 @@ h1 {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px, rgba(0, 0, 0, 0.12) 0px 2px 4px,
     rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 6px 6px,
     rgba(0, 0, 0, 0.09) 0px 2px 2px;
+  background-image: linear-gradient(to top, #434343 0%, black 100%);
 }
 
 .table-mini ul {
@@ -116,23 +122,27 @@ h1 {
 
 th,
 td {
-  border: 1px solid #ddd;
+  border-bottom: 2px solid #434343;
   padding: 8px;
   text-align: left;
-  background-color: #e6f7e3;
+  color: var(--color-text);
+  /* background-color: #e6f7e3; */
 }
 
 td:not(.days):hover {
-  background-color: #b6eeaa;
+  background-color: #4a5548;
   cursor: pointer;
 }
 
+.days {
+  border-right: 2px solid #434343;
+}
 th,
 .days {
-  background-color: #f2f2f2;
-  font-size: x-large;
+  /* background-color: #f2f2f2; */
+  font-size: large;
   font-weight: 700;
-  color: #000;
+  color: #a4b87d;
   text-align: center;
 }
 
