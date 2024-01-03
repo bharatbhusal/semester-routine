@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import subjects from './subjects_details.json';
+import subjects from '../data/subjects_details.json';
 
 const SubjectDetail = ({ courseCode, visibility, disable }) => {
 

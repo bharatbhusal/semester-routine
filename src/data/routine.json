@@ -1,5 +1,5 @@
 {
-    "monday": {
+    "Monday": {
         "8": {
             "subject": "CSEN3091"
         },
@@ -28,7 +28,7 @@
             "subject": "CSEN2141"
         }
     },
-    "tuesday": {
+    "Tuesday": {
         "8": {
             "subject": "CSEN3061"
         },
@@ -57,7 +57,7 @@
             "subject": "No Class"
         }
     },
-    "wednesday": {
+    "Wednesday": {
         "8": {
             "subject": "CSEN2061P"
         },
@@ -86,7 +86,7 @@
             "subject": "No Class"
         }
     },
-    "thursday": {
+    "Thursday": {
         "8": {
             "subject": "CSEN3071P"
         },
@@ -115,7 +115,7 @@
             "subject": "No Class"
         }
     },
-    "friday": {
+    "Friday": {
         "8": {
             "subject": "CSEN3091P"
         },
