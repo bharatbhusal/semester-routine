@@ -79,5 +79,14 @@
             "cabin": "A411",
             "contact": "+91 87634 62709"
         }
+    },
+    "CSEN2141": {
+        "name": "Data Analytics : Descriptive, Predictive, Prescriptive - Coursera",
+        "classroom": "B614",
+        "faculty": {
+            "name": "Atheeq C",
+            "cabin": "B602",
+            "contact": "+91 99858 86565"
+        }
     }
 }
