@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 
 const NavBar = ({ activeDay, handleDay }) => {
+    const days = ['Mon', 'Tue', 'Wed', 'Thur', 'Fri'];
 
     useEffect(() => {
 
