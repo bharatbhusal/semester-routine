@@ -26,21 +26,23 @@ const SubjectDetail = ({ courseCode, visibility, disable }) => {
         };
 
         return (
-            <div className='contact-options'>
-                <div onClick={handleNumberClick} style={{ cursor: 'pointer' }}>
+            <div >
+                <div onClick={handleNumberClick} style={{ cursor: 'pointer', textDecoration: "underline" }}>
                     {phoneNumber}
                 </div>
 
-                {showOptions && (
-                    <div>
-                        <a href={`tel:${phoneNumber}`}>Call</a>
-                        <br />
-                        <a href={`sms:${phoneNumber}`}>SMS</a>
-                        <br />
-                        <a href={`https://wa.me/${phoneNumber}`}>WhatsApp</a>
-                    </div>
-                )}
-            </div>
+                {
+                    showOptions && (
+                        <div className='contact-options'>
+                            <a href={`tel:${phoneNumber}`}>Call</a>
+                            <br />
+                            <a href={`sms:${phoneNumber}`}>SMS</a>
+                            <br />
+                            <a href={`https://wa.me/${phoneNumber}`}>WhatsApp</a>
+                        </div>
+                    )
+                }
+            </div >
         );
     };
 
