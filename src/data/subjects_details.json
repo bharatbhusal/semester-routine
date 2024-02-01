@@ -5,7 +5,7 @@
         "faculty": {
             "name": "Sudha C",
             "cabin": "A611",
-            "contact": "+91 86396 38428"
+            "contact": "+918639638428"
         }
     },
     "CSEN2061P": {
@@ -14,7 +14,7 @@
         "faculty": {
             "name": "Sudha C",
             "cabin": "A611",
-            "contact": "+91 86396 38428"
+            "contact": "+918639638428"
         }
     },
     "CSEN2091": {
@@ -23,7 +23,7 @@
         "faculty": {
             "name": "Nandita Bhanja Chaudhuri",
             "cabin": "A411",
-            "contact": "+91 94931 46542"
+            "contact": "+919493146542"
         }
     },
     "CSEN2091P": {
@@ -32,7 +32,7 @@
         "faculty": {
             "name": "Nandita Bhanja Chaudhuri",
             "cabin": "A411",
-            "contact": "+91 94931 46542"
+            "contact": "+919493146542"
         }
     },
     "CSEN3061": {
@@ -50,7 +50,7 @@
         "faculty": {
             "name": "Archana M R",
             "cabin": "Some cabin",
-            "contact": "+91 96527 73502"
+            "contact": "+919652773502"
         }
     },
     "CSEN3091P": {
@@ -59,7 +59,7 @@
         "faculty": {
             "name": "Archana M R",
             "cabin": "Some cabin",
-            "contact": "+91 96527 73502"
+            "contact": "+919652773502"
         }
     },
     "CSEN3071": {
@@ -68,7 +68,7 @@
         "faculty": {
             "name": "A B Pradeep Kumar",
             "cabin": "Some cabin",
-            "contact": "+91 87634 62709"
+            "contact": "+918763462709"
         }
     },
     "CSEN3071P": {
@@ -77,7 +77,7 @@
         "faculty": {
             "name": "A B Pradeep Kumar",
             "cabin": "A411",
-            "contact": "+91 87634 62709"
+            "contact": "+918763462709"
         }
     },
     "CSEN2141": {
@@ -86,7 +86,7 @@
         "faculty": {
             "name": "Atheeq C",
             "cabin": "B602",
-            "contact": "+91 99858 86565"
+            "contact": "+919985886565"
         }
     }
 }

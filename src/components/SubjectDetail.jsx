@@ -6,14 +6,42 @@ const SubjectDetail = ({ courseCode, visibility, disable }) => {
     // Fetching subject details based on the course code
     const course = subjects[courseCode];
 
-    const handleCopyToClipboard = () => {
-        navigator.clipboard.writeText(course.faculty.contact)
-            .then(() => {
-                console.log('Contact number copied to clipboard');
-            })
-            .catch((error) => {
-                console.error('Error copying to clipboard:', error);
-            });
+
+    // const handleCopyToClipboard = () => {
+    //     navigator.clipboard.writeText(course.faculty.contact)
+    //         .then(() => {
+    //             console.log('Contact number copied to clipboard');
+    //         })
+    //         .catch((error) => {
+    //             console.error('Error copying to clipboard:', error);
+    //         });
+    // };
+
+
+    const ContactOptions = ({ phoneNumber }) => {
+        const [showOptions, setShowOptions] = useState(false);
+
+        const handleNumberClick = () => {
+            setShowOptions(!showOptions);
+        };
+
+        return (
+            <div className='contact-options'>
+                <div onClick={handleNumberClick} style={{ cursor: 'pointer' }}>
+                    {phoneNumber}
+                </div>
+
+                {showOptions && (
+                    <div>
+                        <a href={`tel:${phoneNumber}`}>Call</a>
+                        <br />
+                        <a href={`sms:${phoneNumber}`}>SMS</a>
+                        <br />
+                        <a href={`https://wa.me/${phoneNumber}`}>WhatsApp</a>
+                    </div>
+                )}
+            </div>
+        );
     };
 
     // If course details are not found, display a message
@@ -31,9 +59,11 @@ const SubjectDetail = ({ courseCode, visibility, disable }) => {
             <p><strong>Classroom:</strong> {course.classroom}</p>
             <p><strong>Faculty:</strong> {course.faculty.name}</p>
             <p><strong>Cabin:</strong> {course.faculty.cabin}</p>
-            <p><strong>Contact:</strong>  <span onClick={handleCopyToClipboard} style={{ cursor: "pointer", textDecoration: 'underline' }}>
-                {course.faculty.contact}
-            </span></p>
+            <p><strong>Contact:</strong>
+                {/* {course.faculty.contact} */}
+                <ContactOptions phoneNumber={course.faculty.contact} />
+
+            </p>
 
             {/* Button to close the subject detail */}
             <button onClick={disable}>X</button>
