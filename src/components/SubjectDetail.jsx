@@ -61,9 +61,7 @@ const SubjectDetail = ({ courseCode, visibility, disable }) => {
             <p><strong>Classroom:</strong> {course.classroom}</p>
             <p><strong>Faculty:</strong> {course.faculty.name}</p>
             <p><strong>Cabin:</strong> {course.faculty.cabin}</p>
-            <p><strong>Contact:</strong>
-                {/* {course.faculty.contact} */}
-                <ContactOptions phoneNumber={course.faculty.contact} />
+            <p><strong>Contact:</strong><ContactOptions phoneNumber={course.faculty.contact} />
 
             </p>
 

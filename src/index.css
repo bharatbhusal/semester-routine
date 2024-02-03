@@ -164,6 +164,7 @@ th,
 	display: flex;
 	justify-content: space-between;
 	z-index: 1;
+	overflow-y: scroll;
 }
 
 h2 {
@@ -173,6 +174,7 @@ h2 {
 
 .contact-options {
 	/* width: 5rem; */
+	margin-top: 1rem;
 	display: flex;
 	gap: 1rem;
 	border: 1px solid var(--color-bg-variant);
