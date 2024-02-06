@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import weekdays from "./data/routine.json";
-import SubjectDetail from './components/SubjectDetail';
-import NavBar from './components/Navbar';
-import TableMini from './components/TableMini';
-import TableLarge from './components/TableLarge';
+import weekdays from "../data/routine.json";
+import SubjectDetail from './SubjectDetail';
+import NavBar from './Navbar';
+import TableMini from './TableMini';
+import TableLarge from './TableLarge';
 
 const Table = () => {
     // State variables
