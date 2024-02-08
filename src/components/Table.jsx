@@ -8,7 +8,7 @@ import TableLarge from './TableLarge';
 const Table = () => {
     // State variables
     const daysOfWeek = Object.keys(weekdays);
-    const [visibility, setVisibility] = useState("hidden");
+    const [display, setDisplay] = useState("hidden");
     const [courseCode, setCourseCode] = useState("some course code");
     const [day, setDay] = useState(getTodayDay())
     const [activeDay, setActiveDay] = useState('');
@@ -50,13 +50,13 @@ const Table = () => {
     const getSubjectDetail = (e) => {
         const liElement = e.currentTarget;
         console.log("clicked");
-        setVisibility("visible")
+        setDisplay("visible")
         setCourseCode(liElement.querySelector(".subject").textContent);
     }
 
     // Function to hide the subject detail component
     const hideDetail = () => {
-        setVisibility("hidden");
+        setDisplay("hidden");
     }
 
     // JSX structure for the Table component
@@ -64,7 +64,7 @@ const Table = () => {
         // Container for the table
         <div className='table flex-col' >
 
-            < SubjectDetail visibility={visibility} courseCode={courseCode} disable={hideDetail} />
+            < SubjectDetail display={display} courseCode={courseCode} disable={hideDetail} />
 
             <TableLarge getDailyRoutine={getDailyRoutine} getSubjectDetail={getSubjectDetail} />
 

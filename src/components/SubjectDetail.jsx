@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import subjects from '../data/subjects_details.json';
 
-const SubjectDetail = ({ courseCode, visibility, disable }) => {
+const SubjectDetail = ({ courseCode, display, disable }) => {
 
     // Fetching subject details based on the course code
     const course = subjects[courseCode];
@@ -55,7 +55,7 @@ const SubjectDetail = ({ courseCode, visibility, disable }) => {
     // JSX structure for the SubjectDetail component
     return (
         // Container for the subject detail
-        <div className='subject_detail' style={{ visibility: visibility }}>
+        <div className='subject_detail' style={{ display: display }}>
             {/* Displaying subject details */}
             <h2>{course.name}</h2>
             <p><strong>Classroom:</strong> {course.classroom}</p>

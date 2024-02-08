@@ -70,7 +70,7 @@ h1 {
 	overflow: hidden;
 	width: 80vw;
 	height: 50vh;
-	visibility: visible;
+	/* visibility: visible; */
 	border-collapse: collapse;
 	box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px, rgba(0, 0, 0, 0.12) 0px 2px 4px,
 		rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 6px 6px,
@@ -81,7 +81,7 @@ h1 {
 .table-mini {
 	position: fixed;
 	top: 6rem;
-
+	display: none;
 	border: 0.1px solid #21ab58;
 	color: var(--color-text);
 	font-size: larger;
@@ -91,7 +91,7 @@ h1 {
 	border-radius: 1.5rem;
 	overflow: hidden;
 	border-collapse: collapse;
-	visibility: hidden;
+	/* visibility: hidden; */
 	box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px, rgba(0, 0, 0, 0.12) 0px 2px 4px,
 		rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 6px 6px,
 		rgba(0, 0, 0, 0.09) 0px 2px 2px;
@@ -147,7 +147,8 @@ th,
 .subject_detail {
 	position: absolute;
 	top: 15rem;
-	visibility: hidden;
+	/* visibility: hidden; */
+	display: none;
 	border: 2px solid #169348;
 
 	background-color: rgb(22, 147, 72, 0.1);
@@ -219,7 +220,8 @@ nav {
 	justify-content: space-around;
 	align-items: center;
 	background-color: #169348;
-	visibility: hidden;
+	/* visibility: hidden; */
+	display: none;
 }
 nav div {
 	padding: 0.85rem;
@@ -239,21 +241,28 @@ nav div.active {
 
 @media screen and (max-width: 1024px) {
 	.table-large {
-		visibility: visible;
+		/* visibility: visible;
+		 */
+		display: block;
 	}
 	.table-mini {
-		visibility: hidden;
+		/* visibility: hidden; */
+		display: none;
 	}
 	nav {
-		visibility: visible;
+		/* visibility: visible; */
+		display: none;
 	}
 }
 
 @media screen and (max-width: 800px) {
 	.table-large {
-		visibility: hidden;
+		/* visibility: hidden;
+		 */
+		display: none;
 	}
 	.table-mini {
-		visibility: visible;
+		/* visibility: visible; */
+		display: block;
 	}
 }
