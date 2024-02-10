@@ -2,7 +2,6 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import "./index.css";
-// import MonthlyView from "./components/MonthlyView";
 import NotFoundPage from "./components/404Error";
 import routineJson from "./data/routine.json"
 import RoutineTable from "./components/RoutineTable"
@@ -11,7 +10,6 @@ import { getToday } from "./utils/dateTimeHandler"
 
 const daysOfWeek = Object.keys(routineJson)
 const { dayName } = getToday()
-console.log(dayName)
 const initializeApp = async () => {
     const divContainer = document.getElementById("root");
 
