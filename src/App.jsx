@@ -1,13 +1,14 @@
 import React from 'react';
 import Table from "./components/Table";
+import NavBar from './components/Navbar';
+import { Outlet } from 'react-router';
+import "./App.css"
 
 const App = () => {
     return (
-        // Main container for the application
-        <div className='routine'>
-            <h1>Class Routine</h1>
-            {/* Rendering the Table component */}
-            <Table />
+        <div className='container flex flex-column space-between'>
+            <NavBar />
+            <Outlet />
         </div>
     );
 };

@@ -1,30 +1,38 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
+import routineJson from "../data/routine.json"
+import { NavLink, useParams } from 'react-router-dom';
 
-const NavBar = ({ activeDay, handleDay }) => {
-    const days = ['Mon', 'Tue', 'Wed', 'Thur', 'Fri'];
 
-    useEffect(() => {
 
-    })
+export default function NavBar() {
+    const data = useParams()
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+    const toggleDropdown = () => {
+        setIsDropdownOpen(!isDropdownOpen);
+    };
+
+
+    const daysOfWeek = Object.keys(routineJson);
+
     return (
         <nav>
-            <div className={`day ${activeDay === 'Mon' ? 'active' : ''}`} onClick={handleDay}>
-                Mon
-            </div>
-            <div className={`day ${activeDay === 'Tue' ? 'active' : ''}`} onClick={handleDay}>
-                Tue
-            </div>
-            <div className={`day ${activeDay === 'Wed' ? 'active' : ''}`} onClick={handleDay}>
-                Wed
-            </div>
-            <div className={`day ${activeDay === 'Thur' ? 'active' : ''}`} onClick={handleDay}>
-                Thur
-            </div>
-            <div className={`day ${activeDay === 'Fri' ? 'active' : ''}`} onClick={handleDay}>
-                Fri
+
+            {/* <h3>Hi there</h3> */}
+            <a href="https://www.gitam.edu/" className="flex space-around" target='_blank'>
+                <img src="https://www.gitam.edu/themes/custom/gitam/logo.png" alt="router logo" />
+            </a>
+            <div className="day flex space-around" onClick={toggleDropdown}>
+                Day
+                {isDropdownOpen && (
+                    <div className="days">
+                        {daysOfWeek.map((day, index) => (
+                            <NavLink key={index} to={day.toLocaleLowerCase()}>{day}</NavLink>
+                        ))}
+                    </div>
+                )}
             </div>
         </nav>
     );
-};
+}
 
-export default NavBar;

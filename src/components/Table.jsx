@@ -8,7 +8,7 @@ import TableLarge from './TableLarge';
 const Table = () => {
     // State variables
     const daysOfWeek = Object.keys(weekdays);
-    const [display, setDisplay] = useState("hidden");
+    const [display, setDisplay] = useState("none");
     const [courseCode, setCourseCode] = useState("some course code");
     const [day, setDay] = useState(getTodayDay())
     const [activeDay, setActiveDay] = useState('');
@@ -50,13 +50,13 @@ const Table = () => {
     const getSubjectDetail = (e) => {
         const liElement = e.currentTarget;
         console.log("clicked");
-        setDisplay("visible")
+        setDisplay("block")
         setCourseCode(liElement.querySelector(".subject").textContent);
     }
 
     // Function to hide the subject detail component
     const hideDetail = () => {
-        setDisplay("hidden");
+        setDisplay("none");
     }
 
     // JSX structure for the Table component

@@ -1,12 +1,48 @@
-// Importing the necessary function from the react-dom library
 import { createRoot } from "react-dom/client";
-// Importing the main App component from the "./App" file
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import "./index.css";
+// import MonthlyView from "./components/MonthlyView";
+import NotFoundPage from "./components/404Error";
+import routineJson from "./data/routine.json"
+import RoutineTable from "./components/RoutineTable"
+import { getToday } from "./utils/dateTimeHandler"
 
-// Getting the DOM element with the id "root"
-const divContainer = document.getElementById("root");
-// Creating a root for the React application using createRoot and associating it with the divContainer
-const root = createRoot(divContainer);
-// Rendering the main App component within the root
-root.render(<App />);
+
+const daysOfWeek = Object.keys(routineJson)
+const { dayName } = getToday()
+console.log(dayName)
+const initializeApp = async () => {
+    const divContainer = document.getElementById("root");
+
+    const root = createRoot(divContainer);
+
+    const router = createBrowserRouter([
+        {
+            path: "",
+            element: <App />,
+            errorElement: <NotFoundPage />,
+
+            children: [
+                {
+                    errorElement: <NotFoundPage />,
+                    children: [
+                        {
+                            index: true,
+                            element: <RoutineTable day={dayName} />,
+                        },
+                        ...daysOfWeek.map((day, index) => ({
+                            path: day.toLowerCase(),
+                            element: <RoutineTable day={day} />,
+
+                        })),
+                    ]
+                },
+            ],
+        },
+    ]);
+
+    root.render(<RouterProvider router={router} />);
+};
+
+initializeApp();
