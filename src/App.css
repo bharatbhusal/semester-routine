@@ -69,8 +69,8 @@ nav .days a:hover {
 	padding: 1rem;
 	margin: auto 0;
 	border: 1px solid var(--color-primary);
-	width: 30rem;
-	height: max-content;
+	width: 40%;
+	height: 70%;
 	border-radius: 1.5rem;
 	border-collapse: collapse;
 	visibility: visible;
@@ -89,10 +89,10 @@ nav .days a:hover {
 	border-radius: 0.5rem;
 	color: var(--color-primary);
 	padding: 0.4rem 1rem;
-
+	overflow-y: scroll;
 	cursor: pointer;
 	min-height: 3.5rem;
-	height: 3.5rem;
+	height: 5rem;
 	box-shadow: var(--box-shadow);
 	margin: 0.5rem 0;
 }
@@ -200,4 +200,14 @@ nav .days a:hover {
 
 /* ============= Media Query Start ============= */
 
+/* Media queries for small-sized devices */
+@media screen and (max-width: 600px) {
+	.routine-table {
+		height: max-content;
+		width: 30rem;
+	}
+	.routine-table ul li {
+		height: 3.5rem;
+	}
+}
 /* ============= Media Query End ============= */
