@@ -38,6 +38,10 @@ a {
 	text-decoration: none;
 }
 
+h2 {
+	font-size: large;
+	border-bottom: 2px solid rgb(46, 40, 40);
+}
 .flex {
 	display: flex;
 	align-items: center;

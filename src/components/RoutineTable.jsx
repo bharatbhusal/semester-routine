@@ -10,55 +10,28 @@ const RoutineTable = ({ day }) => {
     const [courseCode, setCourseCode] = useState(null)
     const realSubjects = Object.keys(SubjectDetailsJson)
 
-    const ContactOptions = ({ phoneNumber }) => {
-        const [showOptions, setShowOptions] = useState(false);
-
-        const handleNumberClick = () => {
-            setShowOptions(!showOptions);
-        };
-
-        return (
-            <div >
-                <div onClick={handleNumberClick} style={{ cursor: 'pointer', textDecoration: "underline" }}>
-                    {phoneNumber}
-                </div>
-
-                {
-                    showOptions && (
-                        <div className='contact-options'>
-                            <a href={`tel:${phoneNumber}`}>Call</a>
-                            <br />
-                            <a href={`sms:${phoneNumber}`}>SMS</a>
-                            <br />
-                            <a href={`https://wa.me/${phoneNumber}`}>WhatsApp</a>
-                        </div>
-                    )
-                }
-            </div >
-        );
-    };
-
     const PopUp = () => {
         const course = SubjectDetailsJson[courseCode]
 
         return (realSubjects.includes(courseCode) &&
-            <div className="popup" style={{ visibility: visibility }}>
-
-
-                <h2>{course.name}</h2>
-                <p><strong>Classroom:</strong> {course.classroom}</p>
-                <p><strong>Faculty:</strong> {course.faculty.name}</p>
-                <p><strong>Cabin:</strong> {course.faculty.cabin}</p>
-                <div>
-                    <strong>Contact:</strong>
-                    <ContactOptions phoneNumber={course.faculty.contact} />
+            <div className="popup flex flex-column space-between" style={{ visibility: visibility }}>
+                <div className="details flex flex-column space-between">
+                    <h2>{course.name}</h2>
+                    <p><strong>Classroom:</strong> {course.classroom}</p>
+                    <p><strong>Faculty:</strong> {course.faculty.name}</p>
+                    <p><strong>Cabin:</strong> {course.faculty.cabin}</p>
+                    <div className='contact-options flex space-between'>
+                        <a href={`tel:${course.faculty.contact}`}>Call</a>
+                        <br />
+                        <a href={`sms:${course.faculty.contact}`}>SMS</a>
+                        <br />
+                        <a href={`https://wa.me/${course.faculty.contact}`}>WhatsApp</a>
+                    </div>
                 </div>
 
-                <div className="flex space-around">
-                    <p className="arrow flex space-around" onClick={() => setVisibility("hidden")}>
-                        <FaArrowDown />
-                    </p>
-                </div>
+                <p className="arrow flex space-around" onClick={() => setVisibility("hidden")}>
+                    <FaArrowDown />
+                </p>
             </div>
         )
     }

@@ -75,7 +75,7 @@ nav .days a:hover {
 	margin: auto 0;
 	border: 1px solid var(--color-primary);
 	width: 30rem;
-	height: 75vh;
+	height: max-content;
 	border-radius: 1.5rem;
 	border-collapse: collapse;
 	visibility: visible;
@@ -97,7 +97,7 @@ nav .days a:hover {
 	background-color: #454946;
 	cursor: pointer;
 	min-height: 3.5rem;
-	height: 4rem;
+	height: 3.5rem;
 	box-shadow: var(--box-shadow);
 	margin: 0.5rem 0;
 }
@@ -125,9 +125,13 @@ nav .days a:hover {
 /* ============= PopUp Styles Start ============= */
 
 .popup {
+	z-index: 1;
 	position: absolute;
-	width: 20rem;
 	padding: 1rem;
+	/* height: max-content; */
+	height: 18rem;
+	text-align: left;
+	width: 80%;
 	margin: auto 0;
 	border-radius: 1.5rem;
 	border-collapse: collapse;
@@ -137,12 +141,35 @@ nav .days a:hover {
 	bottom: 1rem;
 	transition: transform 5s ease-in-out;
 }
+
+.details {
+	width: 100%;
+	height: 13rem;
+	margin-bottom: 1rem;
+}
+.details p {
+	width: 100%;
+}
+
 .arrow {
+	height: 2rem;
 	padding: 0.5rem;
 	border-radius: 0.7rem;
 }
 
 .arrow:hover {
+	background-color: var(--color-primary);
+}
+.details .contact-options {
+	width: 100%;
+	flex-wrap: wrap;
+}
+
+.contact-options a {
+	border-radius: 1rem;
+	padding: 0.4rem;
+	min-width: 5rem;
+	text-align: center;
 	background-color: var(--color-primary);
 }
 /* ============= PopUp Styles End ============= */
