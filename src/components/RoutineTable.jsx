@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import RoutineJson from "../data/routine.json";
 import SubjectDetailsJson from "../data/subjects_details.json";
 import { FaArrowDown } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
+import { MdOutlineSms } from "react-icons/md";
+import { IoCallSharp } from "react-icons/io5";
 import { getToday } from '../utils/dateTimeHandler';
 import { useLocation } from 'react-router-dom';
 
@@ -116,11 +119,14 @@ const PopUp = ({ visibility, setVisibility, courseCode, realSubjects }) => {
                 <p><strong>Faculty:</strong> {course.faculty.name}</p>
                 <p><strong>Cabin:</strong> {course.faculty.cabin}</p>
                 <div className='contact-options flex space-between'>
-                    <a href={`tel:${course.faculty.contact}`}>Call</a>
+                    <a href={`tel:${course.faculty.contact}`} className='flex space-around'><IoCallSharp />
+                    </a>
                     <br />
-                    <a href={`sms:${course.faculty.contact}`}>SMS</a>
+                    <a href={`sms:${course.faculty.contact}`} className='flex space-around'><MdOutlineSms />
+                    </a>
                     <br />
-                    <a href={`https://wa.me/${course.faculty.contact}`}>WhatsApp</a>
+                    <a href={`https://wa.me/${course.faculty.contact}`} className='flex space-around'><FaWhatsapp />
+                    </a>
                 </div>
             </div>
 

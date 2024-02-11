@@ -3,6 +3,8 @@ import routineJson from "../data/routine.json"
 import { NavLink, useLocation } from 'react-router-dom';
 import { getToday } from '../utils/dateTimeHandler';
 
+
+
 const Dropdown = ({ daysOfWeek }) => (
     <div className="days">
         {daysOfWeek.map((day, index) => (
@@ -30,7 +32,7 @@ const NavBar = () => {
     };
 
     return (
-        <nav>
+        <nav className='flex space-around'>
             <a href="https://www.gitam.edu/" className="flex" target='_blank'>
                 <img src="https://www.gitam.edu/themes/custom/gitam/logo.png" alt="Gitam logo" />
             </a>

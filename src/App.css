@@ -4,11 +4,8 @@ nav {
 	top: 0;
 	width: 100%;
 	height: 5rem;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
 	padding: 0 3rem;
-	gap: 4rem;
+	gap: 1.5rem;
 }
 
 nav img {
@@ -134,6 +131,7 @@ nav .days a:hover {
 		rgb(66, 71, 65) 100%
 	);
 	bottom: 1rem;
+	overflow: hidden;
 }
 
 .details {
@@ -149,22 +147,29 @@ nav .days a:hover {
 	height: 2rem;
 	padding: 0.5rem;
 	border-radius: 0.7rem;
+	color: red;
 }
 
 .arrow:hover {
-	background-color: var(--color-primary);
+	color: var(--color-white);
+	background-color: red;
 }
 .details .contact-options {
 	width: 100%;
-	flex-wrap: wrap;
+	/* flex-wrap: wrap; */
+	/* overflow-x: scroll; */
+	gap: 5px;
+	overflow: visible;
 }
 
 .contact-options a {
 	border-radius: 1rem;
-	padding: 0.4rem;
-	min-width: 5rem;
+	padding: 0.5rem;
+	min-width: 20px;
 	text-align: center;
 	background-color: var(--color-primary);
+	/* z-index: 1; */
+	font-size: 40px;
 }
 /* ============= PopUp Styles End ============= */
 
@@ -208,6 +213,9 @@ nav .days a:hover {
 	}
 	.routine-table ul li {
 		height: 3.5rem;
+	}
+	nav .days {
+		right: 1rem;
 	}
 }
 /* ============= Media Query End ============= */
