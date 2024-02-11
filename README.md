@@ -13,7 +13,7 @@ Welcome to the Semester Routine Time Table project! This web application allows 
 
 ## Demo
 
-Check out the live demo [here](https://bharatbhusal.github.io/semester-routine). I used github pages to host this app. 
+Check out the live demo [here](https://semester-routine.vercel.app). I used github pages to host this app. 
 ## Features
 
 - View the semester routine for each day and time.
