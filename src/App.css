@@ -134,7 +134,6 @@ nav .days a:hover {
 	border-radius: 1.5rem;
 	border-collapse: collapse;
 	box-shadow: var(--box-shadow);
-	border: 1px solid var(--color-primary);
 	background-image: linear-gradient(to right, var(--color-bg) 0%, black 100%);
 	bottom: 1rem;
 }
@@ -208,3 +207,7 @@ nav .days a:hover {
 }
 
 /* ============= 404 Not Found Styles End ============= */
+
+/* ============= Media Query Start ============= */
+
+/* ============= Media Query End ============= */
