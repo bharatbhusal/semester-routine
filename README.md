@@ -1,6 +1,6 @@
-# Class Routine Time Table
+# Semester Routine Time Table
 
-Welcome to the Class Routine Time Table project! This web application allows you to view and interact with a class routine for different days and times.
+Welcome to the Semester Routine Time Table project! This web application allows you to view and interact with a semester routine for different days and times.
 
 ## Table of Contents
 
@@ -13,10 +13,10 @@ Welcome to the Class Routine Time Table project! This web application allows you
 
 ## Demo
 
-Check out the live demo [here](https://bharatbhusal.github.io/class-routine). I used github pages to host this app. 
+Check out the live demo [here](https://bharatbhusal.github.io/semester-routine). I used github pages to host this app. 
 ## Features
 
-- View the class routine for each day and time.
+- View the semester routine for each day and time.
 - Click on each cell to get detailed information about the subject.
 - Responsive design for various screen sizes.
 - Attractive styling using CSS.
@@ -26,13 +26,13 @@ Check out the live demo [here](https://bharatbhusal.github.io/class-routine). I 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/bharatbhusal/class-routine.git
+   git clone https://github.com/bharatbhusal/semester-routine.git
    ```
 2. Feed data in `routine.json` and `subjects_details.json` maintaining the format.
 3. Install dependencies:
 
    ```bash
-   cd class-routine
+   cd semester-routine
    npm install
    ```
 
@@ -46,7 +46,7 @@ Check out the live demo [here](https://bharatbhusal.github.io/class-routine). I 
 
 2. Open your browser and navigate to [http://localhost:3000](http://localhost:3000).
 
-3. Explore the class routine and interact with the subjects.
+3. Explore the semester routine and interact with the subjects.
 
 ## Technologies Used
 
