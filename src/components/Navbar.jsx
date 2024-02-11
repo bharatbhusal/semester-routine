@@ -3,47 +3,43 @@ import routineJson from "../data/routine.json"
 import { NavLink, useLocation } from 'react-router-dom';
 import { getToday } from '../utils/dateTimeHandler';
 
+const Dropdown = ({ daysOfWeek }) => (
+    <div className="days">
+        {daysOfWeek.map((day, index) => (
+            <NavLink key={index} to={day.toLocaleLowerCase()}>{day}</NavLink>
+        ))}
+    </div>
+);
 
-
-export default function NavBar() {
-    const { pathname } = useLocation()
-    const [day, setDay] = useState(null)
+const NavBar = () => {
+    const { pathname } = useLocation();
+    const [day, setDay] = useState(null);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    const { dayName } = getToday()
+    const { dayName } = getToday();
+    const daysOfWeek = Object.keys(routineJson);
 
     useEffect(() => {
         if (pathname.length > 1)
         {
-            setDay(pathname.slice(1).toUpperCase())
+            setDay(pathname.slice(1).toUpperCase());
         }
-    }, [pathname])
-
+    }, [pathname]);
 
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
     };
 
-
-    const daysOfWeek = Object.keys(routineJson);
-
     return (
         <nav>
-
-            {/* <h3>Hi there</h3> */}
-            <a href="https://www.gitam.edu/" className="flex space-around" target='_blank'>
-                <img src="https://www.gitam.edu/themes/custom/gitam/logo.png" alt="router logo" />
+            <a href="https://www.gitam.edu/" className="flex" target='_blank'>
+                <img src="https://www.gitam.edu/themes/custom/gitam/logo.png" alt="Gitam logo" />
             </a>
-            <div className="day flex space-around" onClick={toggleDropdown}>
+            <div className="day flex flex-column space-around" onClick={toggleDropdown}>
                 {day || dayName}
-                {isDropdownOpen && (
-                    <div className="days">
-                        {daysOfWeek.map((day, index) => (
-                            <NavLink key={index} to={day.toLocaleLowerCase()}>{day}</NavLink>
-                        ))}
-                    </div>
-                )}
+                {isDropdownOpen && <Dropdown daysOfWeek={daysOfWeek} />}
             </div>
         </nav>
     );
-}
+};
 
+export default NavBar;

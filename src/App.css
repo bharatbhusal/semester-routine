@@ -11,12 +11,6 @@ nav {
 	gap: 4rem;
 }
 
-nav a {
-	overflow: hidden;
-	width: 14rem;
-	height: 5rem;
-}
-
 nav img {
 	width: 12rem;
 	overflow: hidden;
@@ -30,6 +24,7 @@ nav .day {
 	cursor: pointer;
 	padding: 0.5rem;
 	border-radius: 0.5rem;
+	min-width: 8rem;
 	width: 11rem;
 	background-color: var(--color-primary);
 }
@@ -80,11 +75,11 @@ nav .days a:hover {
 	border-collapse: collapse;
 	visibility: visible;
 	box-shadow: var(--box-shadow);
-	background-image: linear-gradient(to top, var(--color-bg) 0%, black 100%);
 	max-width: 90%;
 	overflow: hidden;
 	transform: translate(0, -1.8rem);
 	overflow-y: scroll;
+	backdrop-filter: blur(10px);
 }
 .table {
 	width: 100%;
@@ -94,7 +89,6 @@ nav .days a:hover {
 	border-radius: 0.5rem;
 	color: var(--color-primary);
 	padding: 0.4rem 1rem;
-	/* background-color: #454946; */
 
 	cursor: pointer;
 	min-height: 3.5rem;
@@ -134,16 +128,12 @@ nav .days a:hover {
 	border-radius: 1.5rem;
 	border-collapse: collapse;
 	box-shadow: var(--box-shadow);
-	background-image: linear-gradient(to right, var(--color-bg) 0%, black 100%);
+	background-image: linear-gradient(
+		to left,
+		var(--color-bg) 0%,
+		rgb(66, 71, 65) 100%
+	);
 	bottom: 1rem;
-}
-.popup.show {
-	transform: translate(0, 0);
-}
-
-.popup.active {
-	visibility: visible;
-	transform: translateY(0);
 }
 
 .details {
