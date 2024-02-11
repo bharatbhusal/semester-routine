@@ -39,7 +39,6 @@ const RoutineTable = ({ day }) => {
     function handlePopUp(e) {
         const liElement = e.currentTarget;
         setCourseCode(liElement.querySelector(".subject").textContent);
-        console.log(courseCode)
         setVisibility("visible")
     }
     return (

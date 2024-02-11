@@ -123,23 +123,26 @@ nav .days a:hover {
 /* ============= Routine Table Styles End ============= */
 
 /* ============= PopUp Styles Start ============= */
-
 .popup {
 	z-index: 1;
-	position: absolute;
+	position: fixed;
 	padding: 1rem;
-	/* height: max-content; */
 	height: 18rem;
 	text-align: left;
 	width: 80%;
-	margin: auto 0;
 	border-radius: 1.5rem;
 	border-collapse: collapse;
-	visibility: hidden;
 	box-shadow: var(--box-shadow);
 	background-image: linear-gradient(to top, var(--color-bg) 0%, black 100%);
 	bottom: 1rem;
-	transition: transform 5s ease-in-out;
+}
+.popup.show {
+	transform: translate(0, 0);
+}
+
+.popup.active {
+	visibility: visible;
+	transform: translateY(0);
 }
 
 .details {
