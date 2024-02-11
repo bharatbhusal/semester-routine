@@ -1,18 +1,30 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import RoutineJson from "../data/routine.json"
 import SubjectDetailsJson from "../data/subjects_details.json"
 import { FaArrowDown } from "react-icons/fa";
+import { getToday } from '../utils/dateTimeHandler';
+import { useLocation } from 'react-router-dom';
 
 
 
 const RoutineTable = ({ day }) => {
+    const { dayName, hour, minute } = getToday()
+    console.log(dayName, hour, minute)
+    const [selectedDay, setSelectedDay] = useState(dayName)
+    const { pathname } = useLocation()
     const [visibility, setVisibility] = useState("hidden")
     const [courseCode, setCourseCode] = useState(null)
     const realSubjects = Object.keys(SubjectDetailsJson)
 
+    useEffect(() => {
+        if (pathname.length > 1)
+        {
+            setSelectedDay(pathname.slice(1))
+        }
+    }, [pathname])
+
     const PopUp = () => {
         const course = SubjectDetailsJson[courseCode]
-
         return (realSubjects.includes(courseCode) &&
             <div className="popup flex flex-column space-between" style={{ visibility: visibility }}>
                 <div className="details flex flex-column space-between">
@@ -41,6 +53,7 @@ const RoutineTable = ({ day }) => {
         setCourseCode(liElement.querySelector(".subject").textContent);
         setVisibility("visible")
     }
+
     return (
         <div className='routine-table'>
             {
@@ -56,6 +69,13 @@ const RoutineTable = ({ day }) => {
                                         className="flex space-between"
                                         key={index}
                                         onClick={handlePopUp}
+                                        style={
+                                            (dayName.toLocaleLowerCase() === selectedDay && hour == each.hour && minute <= 50)
+                                                ? { border: "2px solid green" }
+                                                : (dayName.toLocaleLowerCase() === selectedDay && parseInt(hour) + 1 == each.hour && minute > 50)
+                                                    ? { border: "2px solid grey" }
+                                                    : null
+                                        }
                                     >
                                         <div className="subject">{each.subject}</div>
                                         <div className="hour">{each.hour}:00 - {each.hour}:50 </div>

@@ -94,7 +94,8 @@ nav .days a:hover {
 	border-radius: 0.5rem;
 	color: var(--color-primary);
 	padding: 0.4rem 1rem;
-	background-color: #454946;
+	/* background-color: #454946; */
+
 	cursor: pointer;
 	min-height: 3.5rem;
 	height: 3.5rem;
@@ -113,7 +114,7 @@ nav .days a:hover {
 }
 
 .routine-table ul li:hover {
-	background-color: #5b3131;
+	background-color: #1b4024;
 }
 
 .active {
@@ -133,7 +134,8 @@ nav .days a:hover {
 	border-radius: 1.5rem;
 	border-collapse: collapse;
 	box-shadow: var(--box-shadow);
-	background-image: linear-gradient(to top, var(--color-bg) 0%, black 100%);
+	border: 1px solid var(--color-primary);
+	background-image: linear-gradient(to right, var(--color-bg) 0%, black 100%);
 	bottom: 1rem;
 }
 .popup.show {
