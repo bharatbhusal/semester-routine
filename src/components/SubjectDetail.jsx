@@ -61,8 +61,9 @@ const SubjectDetail = ({ courseCode, display, disable }) => {
             <p><strong>Classroom:</strong> {course.classroom}</p>
             <p><strong>Faculty:</strong> {course.faculty.name}</p>
             <p><strong>Cabin:</strong> {course.faculty.cabin}</p>
-            <p><strong>Contact:</strong><ContactOptions phoneNumber={course.faculty.contact} />
-
+            <p>
+                <strong>Contact:</strong>
+                <ContactOptions phoneNumber={course.faculty.contact} />
             </p>
 
             {/* Button to close the subject detail */}
