@@ -50,7 +50,7 @@ Check out the live demo [here](https://semester-routine.vercel.app). I used gith
 
 ## Technologies Used
 
-- React
+- Reactjs
 - CSS (Styling)
 
 ## Contributing
